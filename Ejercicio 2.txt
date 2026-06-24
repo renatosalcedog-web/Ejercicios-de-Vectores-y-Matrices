@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int n;
+    int total = 0;
+    double raiz;
+
+    cout << "¿Cuantos numeros desea ingresar en el vector?" << endl;
+    cin >> n;
+
+    vector<int> numeros(n);
+
+    cout << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Ingrese el numero para la posicion [" << i << "]: ";
+        cin >> numeros[i];
+        total += numeros[i];
+    }
+
+    cout << endl;
+
+    cout << "Su vector es:" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << numeros[i] << " " << endl;
+    }
+
+    cout << endl;
+
+    cout << "La suma al cuadrado de los elementos del vector, es:" << endl;
+    raiz = sqrt(total);
+
+    cout << raiz;
+
+    return 0;
+}
