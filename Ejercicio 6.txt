@@ -1,0 +1,23 @@
+// EJERCICIO 6
+// Escribir un programa que devuelva el mínimo de los elementos de un vector
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int tam;
+
+    cout << "Ingrese la cantidad de elementos del vector: ";
+    cin >> tam;
+
+    float datos[tam];
+
+    cout << "\n--- INGRESO DEL VECTOR ---\n";
+
+    cout << "Elemento [0]: ";
+    cin >> datos[0];
+
+    float menor = datos[0];
+
+    for (int i = 1; i <
