@@ -1,0 +1,36 @@
+// EJERCICIO 7
+// Escribir un programa que devuelva el máximo de los elementos de un vector
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int tam;
+
+    cout << "Ingrese la cantidad de elementos del vector: ";
+    cin >> tam;
+
+    vector<float> datos(tam);
+
+    cout << "\n--- INGRESO DEL VECTOR ---\n";
+
+    cout << "Elemento [0]: ";
+    cin >> datos[0];
+
+    float mayor = datos[0];
+
+    for (int i = 1; i < tam; i++) {
+        cout << "Elemento [" << i << "]: ";
+        cin >> datos[i];
+
+        if (datos[i] > mayor) {
+            mayor = datos[i];
+        }
+    }
+
+    cout << "\nEl mayor elemento del vector es: " << mayor << endl;
+
+    return 0;
+}
