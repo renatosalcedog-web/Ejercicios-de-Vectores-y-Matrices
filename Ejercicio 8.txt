@@ -1,0 +1,56 @@
+// EJERCICIO 8
+// Escribir un programa que busque el menor y el mayor elemento ingresado en una matriz de m x n
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int filas, columnas;
+
+    cout << "Ingrese el numero de filas: ";
+    cin >> filas;
+
+    cout << "Ingrese el numero de columnas: ";
+    cin >> columnas;
+
+    vector<vector<int>> matriz(filas, vector<int>(columnas));
+
+    cout << "\nIngrese los elementos de la matriz:\n";
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            cout << "matriz[" << i << "][" << j << "] = ";
+            cin >> matriz[i][j];
+        }
+    }
+
+    cout << "\nSu matriz es:\n";
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            cout << matriz[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    int menor = matriz[0][0];
+    int mayor = matriz[0][0];
+
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            if (matriz[i][j] < menor) {
+                menor = matriz[i][j];
+            }
+
+            if (matriz[i][j] > mayor) {
+                mayor = matriz[i][j];
+            }
+        }
+    }
+
+    cout << "\nResultados:\n";
+    cout << "Elemento minimo: " << menor << endl;
+    cout << "Elemento maximo: " << mayor << endl;
+
+    return 0;
+}
