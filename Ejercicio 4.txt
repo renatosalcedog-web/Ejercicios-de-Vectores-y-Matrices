@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int tam;
+
+    cout << "Ingrese la cantidad de elementos del vector: ";
+    cin >> tam;
+
+    float vectorDatos[tam];
+    float factor;
+
+    cout << "\n--- INGRESO DEL VECTOR ---\n";
+    for (int i = 0; i < tam; i++) {
+        cout << "Elemento [" << i << "]: ";
+        cin >> vectorDatos[i];
+    }
+
+    cout << "\nIngrese el numero por el que desea multiplicar el vector: ";
+    cin >> factor;
+
+    cout << "\nVector resultante:\n";
+    for (int i = 0; i < tam; i++) {
+        vectorDatos[i] *= factor;
+        cout << "Elemento [" << i << "] = " << vectorDatos[i] << endl;
+    }
+
+    return 0;
+}
